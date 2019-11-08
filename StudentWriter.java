@@ -44,7 +44,7 @@ public class StudentWriter {
 			}
 		}
 		catch (NumberFormatException e) {
-			returnMsg = "Invalid studentId: " + e.toString();
+			returnMsg = "Invalid studentId: Must be a whole number with no decimals.";
 		}
 		catch (StudentException e) {
 			returnMsg = e.toString();
@@ -93,7 +93,7 @@ public class StudentWriter {
 
 		}
 		catch (NumberFormatException e) {
-			returnMsg = "Invalid studentId: " + e.toString();
+			returnMsg = "Invalid studentId: Must be a whole number with no decimals.";
 		}
 		return returnMsg;
 	}

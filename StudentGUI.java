@@ -76,19 +76,19 @@ public class StudentGUI extends JFrame {
 		// Student Text Area
 		label = new JLabel("Load Students");
 		label.setFont(new Font("Courier New", Font.BOLD, 36));
-		label.setBounds(475, 0, 300, 50);
+		label.setBounds(10, 200, 300, 50);
 		add(label);
 		Box box = Box.createHorizontalBox();
 		studentInfo = new JTextArea();
 		studentInfo.setEditable(false); 
-		box.setBounds(480, 45, 480, 115);
+		box.setBounds(10, 250, 480, 115);
 		box.add(new JScrollPane(studentInfo));
 		add(box);
 
 		// Load Button
 		loadButton = new JButton("Load Students");
 		loadButton.setFont(new Font("Courier New", Font.PLAIN, 16));
-		loadButton.setBounds(635, 167, 170, 25);
+		loadButton.setBounds(167, 375, 170, 25);
 		loadButton.addActionListener(new ActionListener() {   
 			@Override
 			public void actionPerformed(ActionEvent event) {
@@ -100,18 +100,18 @@ public class StudentGUI extends JFrame {
 		// Delete Student
 		label = new JLabel("Delete Student");
 		label.setFont(new Font("Courier New", Font.BOLD, 36));
-		label.setBounds(1000, 0, 400, 50);
+		label.setBounds(10, 410, 400, 50);
 		add(label);
 		label = new JLabel("Student Id");
 		label.setFont(new Font("Courier New", Font.PLAIN, 18));
-		label.setBounds(1000, 40, 200, 25);
+		label.setBounds(10, 450, 200, 25);
 		add(label);
 		deleteTextField = new JTextField();
-		deleteTextField.setBounds(1130, 45, 300, 25);
+		deleteTextField.setBounds(140, 450, 300, 25);
 		add(deleteTextField);
 		deleteButton = new JButton("Delete Student");
 		deleteButton.setFont(new Font("Courier New", Font.PLAIN, 16));
-		deleteButton.setBounds(1190, 75, 180, 25);
+		deleteButton.setBounds(167, 485, 180, 25);
 		deleteButton.addActionListener(new ActionListener() {   
 			@Override
 			public void actionPerformed(ActionEvent event) {
@@ -130,7 +130,7 @@ public class StudentGUI extends JFrame {
 		
 		StudentGUI myFrame = new StudentGUI(); 
 		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		myFrame.setSize(1500, 250); 
+		myFrame.setSize(525, 575); 
 		myFrame.setVisible(true);
 	}
 }

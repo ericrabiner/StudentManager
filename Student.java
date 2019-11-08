@@ -15,14 +15,20 @@ public class Student implements Serializable {
 	// Constructors
 	// Student may have zero courses.
 	public Student(int stdId, String firstName, String lastName, ArrayList<String> courses) throws StudentException {
-		if (stdId >= 0 && !firstName.equals("") && !lastName.equals("")) {
+		if (stdId < 0) {
+			throw new StudentException("Invalid student id!");
+		}
+		else if (firstName.equals("")) {
+			throw new StudentException("Invalid first name!");
+		}
+		else if (lastName.equals("")) {
+			throw new StudentException("Invalid last name!");
+		}
+		else {
 			this.stdId = stdId;
 			this.firstName = firstName;
 			this.lastName = lastName;
 			this.courses = new ArrayList<String>(courses);
-		}
-		else {
-			throw new StudentException("Invalid student!");
 		}
 	}
 	
